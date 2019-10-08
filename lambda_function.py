@@ -284,10 +284,10 @@ def lambda_handler(event, context):
 
     if environment == "staging":
         # TODO: Move to an env variable
-        mesos_master_host = 'staging.mydomain.com'
+        mesos_master_host = 'mesosmaster.staging.mydomain.com'
     else:
         # TODO: Move to an env variable
-        mesos_master_host = 'prod.mydomain.com'
+        mesos_master_host = 'mesosmaster.prod.mydomain.com'
     maintenance_url = '{}://{}:{}/master/maintenance/schedule'.format(
         PROTOCOL, mesos_master_host, MESOS_MASTER_PORT
     )
